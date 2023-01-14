@@ -11,7 +11,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background: #000000;
-    box-shadow: 0px 2px 35px 10px rgba(0, 0, 0, 0.25);
+    color: white;
 }
 
 .container {
@@ -22,8 +22,14 @@ body {
     width: 100%;
 }
 
-.main {
+.dark-mode{
+    background: black;
     color: white;
+}
+
+.light-mode{
+    background: white;
+    color: black;
 }
 
 .main_wrap {
@@ -41,6 +47,7 @@ body {
     line-height: 40px;
     text-align: left;
     margin: 15px 0 10px 0;
+    color: white;
 }
 
 .main_p {
@@ -50,6 +57,7 @@ body {
     line-height: 19px;
     text-align: left;
     margin-bottom: 15px;
+    color: white;
 }
 
 .main_btn {
@@ -63,74 +71,212 @@ body {
     text-align: center;
     margin-bottom: 25px;
     cursor: pointer;
-    border: 1px solid black;
+    border: transparent;
     color: white;
     transition: 0.3s;
 }
 
-.main_btn:hover{
+.main_btn:hover {
     transform: scale(1.2);
 }
 
-.main_social{
+.main_social {
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     font-weight: 600;
     line-height: 40px;
     text-align: left;
+    margin-bottom: 25px;
 }
 
-.media{
+.media {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-top: 25px;
+    color: white;
 }
 
-.app{
+.app {
     font-size: 25px;
     color: white;
     transition: 0.3s;
 }
 
-.app:hover{
+.app:hover {
     transform: scale(1.3);
 }
 
-@media screen and (max-width:500px){
-    .logo{
-        height: 60%;
-        width: 60%;
-        object-fit: cover;
-    }
+.apps {
+    font-size: 25px;
+    color: white;
+    transition: 0.3s;
 }
 
-@media screen and (max-width:400px){
-    .logo{
+.apps:hover {
+    transform: scale(1.3);
+}
+
+.header_wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    background: rgb(19, 19, 19);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 35px;
+    flex-direction: column;
+    padding: 20px 25px 20px 25px;
+    transform: translateX(100%);
+    box-shadow: 0px 4px 10px 0px #0000001A;
+    transition: all .5s;
+}
+
+.menu_link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0px;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu_link_img{
+    height: 55px;
+    width: 55px;
+}
+
+.menu_link_h {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.header_burger-btn {
+    position: fixed;
+    top: 20px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.header_burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: white;
+    left: 5px;
+    transition: all .5s;
+}
+
+.header_burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header_burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header.open .header_burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.header.open .header_burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header_burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .menu {
+    transform: translateX(0);
+}
+
+.dark_mode{
+    padding: 10px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: white;
+    background: black;
+    border-radius:100px;
+    cursor: pointer;
+    margin: 6px 0 10px;
+    transition: 0.3s;
+}
+
+.dark_mode:hover{
+    transform: scale(1.2);
+}
+
+.link_soon{
+    color: rgb(152, 152, 152);
+}
+
+@media screen and (max-width:400px) {
+    .menu {
+        width: 37%;
+    }
+
+    .logo {
         height: 70%;
         width: 70%;
         object-fit: cover;
     }
 }
 
-@media screen and (max-width:350px){
-    .main_h{
+@media screen and (max-height:350px) {
+    .menu {
+        gap: 15px;
+    }
+
+    .main_h {
         font-size: 28px;
         line-height: 36px;
     }
 
-    .main_p{
+    .main_p {
         font-size: 14px;
         line-height: 16px;
     }
 
-    .main_btn{
+    .main_btn {
         padding: 8px 35px;
     }
 
-    .main_social{
+    .main_social {
         font-size: 28px;
         line-height: 36px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .logo {
+        height: 60%;
+        width: 60%;
+        object-fit: cover;
     }
 }
