@@ -63,6 +63,8 @@ body {
     text-align: center;
     margin-bottom: 25px;
     cursor: pointer;
+    border: 1px solid black;
+    color: white;
     transition: 0.3s;
 }
 
