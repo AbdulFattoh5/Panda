@@ -14,7 +14,13 @@ const modeBtn = document.querySelector('.dark_mode'),
     main_btn = document.querySelector('.main_btn'),
     main_social = document.querySelector('.main_social'),
     app = document.querySelector('.app'),
-    apps = document.querySelector('.apps')
+    apps = document.querySelector('.apps'),
+    menu = document.querySelector('.menu'),
+    soonLink = document.querySelector('.link_soon'),
+    burgerSpan1 = document.querySelector('.header_burger-span1'),
+    burgerSpan2 = document.querySelector('.header_burger-span2'),
+    burgerSpan3 = document.querySelector('.header_burger-span3')
+
 
     function mode() {
         if (modeBtn.innerHTML == 'Light mode') {
@@ -25,14 +31,24 @@ const modeBtn = document.querySelector('.dark_mode'),
             main_social.style.color = 'black'
             app.style.color = 'black'
             apps.style.color = 'black'
+            menu.style.backgroundColor = 'rgb(95, 95, 95)'
+            burgerSpan1.style.backgroundColor = 'black'
+            burgerSpan2.style.backgroundColor = 'black'
+            burgerSpan3.style.backgroundColor = 'black'
+            soonLink.style.color = 'white'
         } else if(modeBtn.innerHTML == 'Dark mode'){
+            modeBtn.innerHTML = 'Light mode'
             main_h.style.color = 'white'
             main_p.style.color = 'white'
             main_btn.style.color = 'white'
             main_social.style.color = 'white'
             app.style.color = 'white'
             apps.style.color = 'white'
-            modeBtn.innerHTML = 'Light mode'
+            menu.style.backgroundColor = 'rgb(19, 19, 19)'
+            burgerSpan1.style.backgroundColor = 'white'
+            burgerSpan2.style.backgroundColor = 'white'
+            burgerSpan3.style.backgroundColor = 'white'
+            soonLink.style.color = 'rgb(152, 152, 152)'
         }
     }
 
