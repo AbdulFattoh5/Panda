@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #000000;
+    background: rgb(19, 19, 19);
     color: white;
 }
 
@@ -123,6 +123,8 @@ body {
     justify-content: flex-end;
 }
 
+/* Menu */
+
 .menu {
     position: fixed;
     right: 0;
@@ -215,6 +217,8 @@ body {
     transform: translateX(0);
 }
 
+ /* Light / Dark mode */
+
 .dark_mode {
     padding: 10px 20px;
     font-family: 'Roboto', sans-serif;
@@ -239,6 +243,92 @@ body {
 .link_soon {
     color: rgb(152, 152, 152);
 }
+
+/* Loading page */
+
+.preloader{
+    position: fixed;
+    background: rgb(19, 19, 19);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;height: 100%;
+    width: 100%;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    position: relative;
+}
+
+.loader-hidden {
+    display: none;
+}
+
+.loader:before {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background: #000;
+    opacity: 0.25;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow 0.5s linear infinite;
+}
+
+.loader:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    animation: bxSpin 0.5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+}
+
+@keyframes bxSpin {
+    17% {
+        border-bottom-right-radius: 3px;
+    }
+
+    25% {
+        transform: translateY(9px) rotate(22.5deg);
+    }
+
+    50% {
+        transform: translateY(18px) scale(1, .9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+    }
+
+    75% {
+        transform: translateY(9px) rotate(67.5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+@keyframes shadow {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1);
+    }
+}
+
+/* Adaptive */
+
 
 @media screen and (max-width:670px) {
     .menu_link_h {
@@ -285,7 +375,7 @@ body {
         line-height: 20px;
     }
 
-    .menu{
+    .menu {
         width: 45%;
     }
 }
@@ -314,30 +404,30 @@ body {
         object-fit: cover;
     }
 
-    .main_h{
+    .main_h {
         font-size: 28px;
     }
 
-    .main_social{
+    .main_social {
         font-size: 28px;
     }
 
-    .main_p{
+    .main_p {
         font-size: 15px;
     }
 
-    .main_btn{
+    .main_btn {
         padding: 8px 35px;
     }
 }
 
 @media screen and (max-width:350px) {
 
-    .link{
+    .link {
         font-size: 15px;
     }
 
-    .menu_link_h{
+    .menu_link_h {
         font-size: 15px;
     }
 }
