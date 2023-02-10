@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panda</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css">
 </head>
@@ -35,10 +35,6 @@
         <div class="container">
             <div class="header">
                 <div class="header_wrap">
-                    <!--<div class="header_logo">
-                        <img src="./img/little_logo.svg" alt="">
-                        <h4 class="header_logo_h">PANDA</h4>
-                    </div> -->
                     <ul class="menu">
                         <li class="item">
                             <div class="menu_link">
@@ -55,7 +51,8 @@
                         <li class="item">
                             <div class="menu_link">
                                 <span class="link">Other apps</span>
-                                <span class="link_soon">Soon...</span>
+                                <a class="PGapp" href="https://abdulfattoh5.github.io/Password-Generator/"><i
+                                        class="fas fa-unlock-alt"></i></a>
                             </div>
                         </li>
                         <li class="item">
@@ -77,37 +74,70 @@
                     </button>
                 </div>
             </div>
-            <!-- <div class="music music_wrap">
-                <div class="img_area">
-                    <img src="./img/Coming-Back-For-You.jfif" alt="">
-                </div>
-                <div class="song_details">
-                    <h1 class="name">Coming Back For You</h1>
-                    <h3 class="artist">Fireboy DML</h3>
-                </div>
-                <div class="audioC">
-                    <div class="song_timer">
-                        <span class="current_time">0:00</span>
-                        <span class="max_duration">0:00</span>
-                    </div>
-                    <div class="progress_area">
-                        <div class="progress_bar">
-                            <audio id="main_audio" src="./songs/Coming Back For You.mp3"></audio>
+            <div class="Panda">
+                <h1 class="player_title">Panda Music</h1>
+                <div class="Panda_music-player">
+                    <div class="wrapper">
+                        <div class="top_bar">
+                            <i class="fas fa-angle-down"></i>
+                            <span>Now Playing</span>
+                            <i class="far fa-ellipsis-h"></i>
+                        </div>
+                        <div class="img_area">
+                            <img src="./img/music-1.jpg" alt="">
+                        </div>
+                        <div class="song_details">
+                            <p class="name">Coming-Back-For-You</p>
+                            <p class="artist">Fireboy DML</p>
+                        </div>
+                        <div class="progress_area">
+                            <div class="progress_bar"></div>
+                            <div class="timer">
+                                <span class="current"></span>
+                                <span class="duration"></span>
+                            </div>
+                            <audio id="main_audio" src=""></audio>
+                        </div>
+                        <div class="controls">
+                            <button id="lyrics" class="material_icons">
+                                <i class="fas fa-microphone-stand"></i>
+                            </button>
+                            <button id="prev" class="material_icons">
+                                <i class="fas fa-step-backward"></i>
+                            </button>
+                            <div class="play_pause">
+                                <button id="play" class="material_icons">
+                                    <i class="button fas fa-play"></i>
+                                </button>
+                            </div>
+                            <button id="next" class="material_icons">
+                                <i class="fas fa-step-forward"></i>
+                            </button>
+                            <button id="more-music" class="material_icons">
+                                <i class="fas fa-list-music"></i>
+                            </button>
+                        </div>
+                        <div class="music_list">
+                            <div class="music_header">
+                                <div class="row">
+                                    <i class="fas fa-list-music"></i>
+                                    <span>Music list</span>
+                                </div>
+                                <i id="close" class="fal fa-times"></i>
+                            </div>
+                            <ul>
+
+                            </ul>
+                        </div>
+                        <div class="lyrics">
+                            <i id="close_btn" class="fal fa-times"></i>
+                            <div class="lyrics_div">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="controls">
-                    <button class="btnC" id="prev">
-                        <i class="fas fa-step-backward"></i>
-                    </button>
-                    <button class="play-pause btnC">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button class="btnC" id="next">
-                        <i class="fas fa-step-forward"></i>
-                    </button>
-                </div>
-            </div> -->
+            </div>
         </div>
     </section>
     <script src="./app.js"></script>
