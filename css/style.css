@@ -354,7 +354,7 @@ body {
     padding: 25px 30px;
     background: #33363b;
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .wrapper i {
@@ -653,7 +653,7 @@ ul li.playing {
     }
 }
 
-@media screen and (max-width:415px) {
+@media screen and (max-width:400px) {
     .wrapper {
         width: 300px;
     }
