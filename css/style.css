@@ -653,16 +653,6 @@ ul li.playing {
     }
 }
 
-@media screen and (max-width:400px) {
-    .wrapper {
-        width: 300px;
-    }
-
-    .img_area {
-        height: 213px;
-        width: 211px;
-    }
-}
 
 @media screen and (max-width:400px) {
 
@@ -690,6 +680,26 @@ ul li.playing {
 
     .main_btn {
         padding: 8px 35px;
+    }
+
+    .wrapper {
+        width: 345px;
+    }
+
+    .img_area {
+        height: 233px;
+        width: 240px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .wrapper {
+        width: 300px;
+    }
+
+    .img_area {
+        height: 213px;
+        width: 211px;
     }
 }
 
