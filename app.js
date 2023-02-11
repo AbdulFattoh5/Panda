@@ -59,10 +59,10 @@ modeBtn.addEventListener('click', function () {
     mode()
 })
 
-main_btn.addEventListener('click', function () {
-    mainSection.style.display = 'none'
-    Panda.style.display = 'block'
-})
+// main_btn.addEventListener('click', function () {
+//     mainSection.style.display = 'none'
+//     Panda.style.display = 'block'
+// })
 
 // loading
 window.onload = function () {
@@ -77,7 +77,7 @@ let allMusic = [
         artist: 'Fireboy DML',
         img: 'music-1',
         src: 'music-1',
-        lyrics:`Oou le le <br>
+        lyrics: `Oou le le <br>
         Oou le le <br>
         Oou le le <br>
         Oou le le <br>
@@ -152,7 +152,7 @@ let allMusic = [
         artist: 'Mabel-Matiz',
         img: 'music-2',
         src: 'music-2',
-        lyrics:`Bitmez oyun, bitmez oyun kızarsam <br>
+        lyrics: `Bitmez oyun, bitmez oyun kızarsam <br>
         Yerde kanım, şimdi ne fayda kazansa <br>
         Fırtınadayım, bir fırtınadayım <br>
         Gözümün gördüğü, göğsümün bildiği ile bir değil <br>
@@ -178,7 +178,7 @@ let allMusic = [
         artist: 'Jah-Khalib',
         img: 'music-3',
         src: 'music-3',
-        lyrics:`Мне приснился сон граничащий с реальностью <br>
+        lyrics: `Мне приснился сон граничащий с реальностью <br>
         Там утренней росой свет падал яркой радостью в наш дом <br>
         Я слышал смех детей, видел улыбку на лице твоём <br>
         Проснувшись в темноте, вновь оказался в хаосе <br>
@@ -229,7 +229,7 @@ let allMusic = [
         artist: 'Frank Ocean',
         img: 'music-4',
         src: 'music-4',
-        lyrics:`Yeah, yeah oh <br>
+        lyrics: `Yeah, yeah oh <br>
         Yeah, yeah yeah <br>
         That's the way everyday goes <br>
         Every time we've no control <br>
@@ -287,14 +287,14 @@ let allMusic = [
         artist: ' SYML',
         img: 'music-5',
         src: 'music-5',
-        lyrics:`No Lyrics`
+        lyrics: `No Lyrics`
     },
     {
         name: 'Qanay',
         artist: 'Ali Otenov',
         img: 'music-6',
         src: 'music-6',
-        lyrics:`Менікісің енді сені <br>
+        lyrics: `Менікісің енді сені <br>
         Ешкімгеде бергім келмиді <br>
         Қатырмашы болды миымды <br>
         Жоқ дегеніңе сенбим <br>
@@ -554,3 +554,19 @@ lyricsBtn.addEventListener('click', function () {
 lyricsCloseBtn.addEventListener('click', function () {
     lyrics.classList.remove('active')
 })
+
+// Volume
+const volumeIcon = document.querySelector('#volume_i'),
+    volumeBox = document.querySelector('.volume'),
+    volume_show = document.querySelector('#rangeValue'),
+    track = document.createElement('audio'),
+    recent_volume = document.querySelector('#volume_slider');
+volumeIcon.addEventListener('click', function () {
+    volumeBox.classList.toggle('active')
+    volumeIcon.classList.toggle('active')
+})
+function thisVolume(volume_value) { 
+    var myvideo = document.querySelector("audio"); 
+    document.getElementById("rangeValue").innerHTML = volume_value; 
+    myvideo.volume = volume_value / 100; 
+}

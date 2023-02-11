@@ -16,7 +16,7 @@
         <div class="loader"></div>
     </div>
     <!-- Main Section -->
-    <section class="main">
+    <!-- <section class="main">
         <div class="container">
             <div class="main_wrap">
                 <img class="logo" src="./img/Big_logo.svg" alt="">
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="player">
         <div class="container">
             <div class="header">
@@ -78,8 +78,13 @@
                 <h1 class="player_title">Panda Music</h1>
                 <div class="Panda_music-player">
                     <div class="wrapper">
+                        <div class="volume">
+                            <input oninput="thisVolume(this.value)" onchange="thisVolume(this.value)" id="volume_slider" type="range" min="0" max="100" value="100"
+                                oninput="rangeValue.innerText = this.value">
+                            <p id="rangeValue">100</p>
+                        </div>
                         <div class="top_bar">
-                            <i class="fas fa-angle-down"></i>
+                            <i id="volume_i" class="fas fa-angle-down"></i>
                             <span>Now Playing</span>
                             <i class="far fa-ellipsis-h"></i>
                         </div>
