@@ -59,10 +59,10 @@ modeBtn.addEventListener('click', function () {
     mode()
 })
 
-// main_btn.addEventListener('click', function () {
-//     mainSection.style.display = 'none'
-//     Panda.style.display = 'block'
-// })
+main_btn.addEventListener('click', function () {
+    mainSection.style.display = 'none'
+    Panda.style.display = 'block'
+})
 
 // loading
 window.onload = function () {
@@ -566,7 +566,6 @@ volumeIcon.addEventListener('click', function () {
     volumeIcon.classList.toggle('active')
 })
 function thisVolume(volume_value) { 
-    var myvideo = document.querySelector("audio"); 
     document.getElementById("rangeValue").innerHTML = volume_value; 
-    myvideo.volume = volume_value / 100; 
+    mainAudio.volume = volume_value / 100; 
 }

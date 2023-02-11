@@ -647,6 +647,7 @@ ul li.playing {
     border: 2px solid #eaeaea;
     border-radius: 50%;
     cursor: pointer;
+    user-select: none;
 }
 
 .volume input[type="range"]::-webkit-slider-thumb:hover {
