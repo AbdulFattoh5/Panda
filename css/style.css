@@ -12,6 +12,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background: rgb(19, 19, 19);
     color: white;
+    overflow-y: hidden;
 }
 
 .container {
@@ -544,9 +545,11 @@ ul li.playing {
     margin-bottom: 15px;
 }
 
-/* .Panda {
+.Panda {
     display: none;
-} */
+}
+
+/* Lyrics */
 
 .lyrics {
     position: absolute;
@@ -589,6 +592,8 @@ ul li.playing {
     display: flex;
     justify-content: flex-end;
 }
+
+/* Volume */
 
 .volume {
     position: absolute;
@@ -652,6 +657,51 @@ ul li.playing {
 
 .volume input[type="range"]::-webkit-slider-thumb:hover {
     background: #eaeaea;
+}
+
+i{
+    font-size: 20px;
+}
+
+/* Player Menu */
+
+.player_menu{
+    position: absolute;
+    right: 0;
+    top: -55%;
+    margin: 10px 0;
+    opacity: 0;
+    background: #ebedec;
+    border-radius: 15px;
+    width: 100%;
+    padding: 15px 30px;
+    height: 200px;
+    transition: all 0.14s ease-out;
+    z-index: 30;
+}
+
+.player_menu.active{
+    top: -10px;
+    opacity: 1;
+}
+
+.player_menu_link{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#btn_close{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.player_menu_link_p{
+    font-family: sans-serif;
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
 }
 
 
