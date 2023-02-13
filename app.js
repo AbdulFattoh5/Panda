@@ -1,8 +1,13 @@
 // Burger menu
 const burger = document.querySelector('#burger'),
-    header = document.querySelector('.header')
+    header = document.querySelector('.header'),
+    overlay = document.querySelector('.header_overlay')
 
 burger.addEventListener('click', function () {
+    header.classList.toggle('open')
+})
+
+overlay.addEventListener('click', function () {
     header.classList.toggle('open')
 })
 
@@ -46,7 +51,7 @@ function mode() {
         main_social.style.color = 'white'
         app.style.color = 'white'
         apps.style.color = 'white'
-        menu.style.backgroundColor = 'rgb(19, 19, 19)'
+        menu.style.backgroundColor = 'black'
         burgerSpan1.style.backgroundColor = 'white'
         burgerSpan2.style.backgroundColor = 'white'
         burgerSpan3.style.backgroundColor = 'white'
@@ -582,7 +587,8 @@ function thisVolume(volume_value) {
 // Menu on player
 const playerMenuBtn = document.querySelector('#Menu_player'),
     playerMenu = document.querySelector('.player_menu'),
-    playerMenuCloseBtn = document.querySelector('#btn_close')
+    playerMenuCloseBtn = document.querySelector('#btn_close'),
+    PlayerMenuOverlay = document.querySelector('.menu_player_overlay')
 
 playerMenuBtn.addEventListener('click', function () {
     playerMenu.classList.add('active')
