@@ -535,7 +535,7 @@ ul li .row p {
 }
 
 ul li.playing {
-    color: #3c5484;
+    color: black;
     pointer-events: none;
 }
 
@@ -569,7 +569,7 @@ ul li.playing {
 }
 
 .lyrics.active {
-    bottom: -9px;
+    bottom: -10px;
     opacity: 1;
 }
 
@@ -690,6 +690,7 @@ i{
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
+    margin-bottom: 12px;
 }
 
 #btn_close{
@@ -702,6 +703,11 @@ i{
     font-size: 18px;
     color: black;
     font-weight: 500;
+}
+
+#download{
+    background: transparent;
+    border: none;
 }
 
 

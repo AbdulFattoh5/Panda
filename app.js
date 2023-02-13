@@ -77,7 +77,7 @@ let allMusic = [
         artist: 'Fireboy DML',
         img: 'music-1',
         src: 'music-1',
-        link:'https://youtu.be/qBMSYhzc0nM',
+        link: 'https://youtu.be/qBMSYhzc0nM',
         lyrics: `Oou le le <br>
         Oou le le <br>
         Oou le le <br>
@@ -153,7 +153,7 @@ let allMusic = [
         artist: 'Mabel-Matiz',
         img: 'music-2',
         src: 'music-2',
-        link:'https://youtu.be/kLGvPVQ7Djs',
+        link: 'https://youtu.be/kLGvPVQ7Djs',
         lyrics: `Bitmez oyun, bitmez oyun kızarsam <br>
         Yerde kanım, şimdi ne fayda kazansa <br>
         Fırtınadayım, bir fırtınadayım <br>
@@ -180,7 +180,7 @@ let allMusic = [
         artist: 'Jah-Khalib',
         img: 'music-3',
         src: 'music-3',
-        link:'https://youtu.be/H6mvQ0_-QYk',
+        link: 'https://youtu.be/H6mvQ0_-QYk',
         lyrics: `Мне приснился сон граничащий с реальностью <br>
         Там утренней росой свет падал яркой радостью в наш дом <br>
         Я слышал смех детей, видел улыбку на лице твоём <br>
@@ -232,7 +232,7 @@ let allMusic = [
         artist: 'Frank Ocean',
         img: 'music-4',
         src: 'music-4',
-        link:'https://youtu.be/uzS3WG6__G4',
+        link: 'https://youtu.be/uzS3WG6__G4',
         lyrics: `Yeah, yeah oh <br>
         Yeah, yeah yeah <br>
         That's the way everyday goes <br>
@@ -291,7 +291,7 @@ let allMusic = [
         artist: ' SYML',
         img: 'music-5',
         src: 'music-5',
-        link:'https://youtu.be/jVoyuNsAcg8',
+        link: 'https://youtu.be/jVoyuNsAcg8',
         lyrics: `No Lyrics`
     },
     {
@@ -299,7 +299,7 @@ let allMusic = [
         artist: 'Ali Otenov',
         img: 'music-6',
         src: 'music-6',
-        link:'https://youtu.be/gOudJ190wYI',
+        link: 'https://youtu.be/gOudJ190wYI',
         lyrics: `Менікісің енді сені <br>
         Ешкімгеде бергім келмиді <br>
         Қатырмашы болды миымды <br>
@@ -375,7 +375,8 @@ const wrapper = document.querySelector('.wrapper'),
     lyrics = document.querySelector('.lyrics'),
     lyricsDiv = document.querySelector('.lyrics_div'),
     lyricsCloseBtn = document.querySelector('#close_btn'),
-    linkBtn = document.getElementById('link')
+    linkBtn = document.getElementById('link'),
+    downloadBtn = document.getElementById('download')
 
 
 let musicIndex = 1
@@ -391,7 +392,8 @@ function loadMusic(IndexNumb) {
     musicImg.src = `img/${allMusic[IndexNumb - 1].img}.jpg`
     mainAudio.src = `songs/${allMusic[IndexNumb - 1].src}.mp3`
     lyricsDiv.innerHTML = allMusic[IndexNumb - 1].lyrics
-    linkBtn.href=`${allMusic[IndexNumb - 1].link}`
+    linkBtn.href = `${allMusic[IndexNumb - 1].link}`
+    downloadBtn.href = `songs/${allMusic[IndexNumb - 1].src}.mp3`
 }
 
 // Music Play function
