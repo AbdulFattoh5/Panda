@@ -622,6 +622,7 @@ randomMusicBtn.addEventListener('click', function () {
 })
 randomMusicClose.addEventListener('click', function () {
     randomMusic.classList.remove('active')
+    RMpauseMusic()
 })
 
 maxMusic = 6
