@@ -269,7 +269,7 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Loading page */
+/* Loading */
 
 .preloader {
     position: fixed;
@@ -363,6 +363,7 @@ body {
 
 .wrapper {
     color: black;
+    overflow: hidden;
     width: 380px;
     position: relative;
     border-radius: 15px;
@@ -560,6 +561,11 @@ ul li.playing {
     margin-bottom: 15px;
 }
 
+i {
+    font-size: 20px;
+}
+
+
 .Panda {
     display: none;
 }
@@ -608,7 +614,7 @@ ul li.playing {
     justify-content: flex-end;
 }
 
-/* Volume */
+/* Volume
 
 .volume {
     position: absolute;
@@ -672,15 +678,11 @@ ul li.playing {
 
 .volume input[type="range"]::-webkit-slider-thumb:hover {
     background: #eaeaea;
-}
-
-i{
-    font-size: 20px;
-}
+} */
 
 /* Player Menu */
 
-.player_menu{
+.player_menu {
     position: absolute;
     right: 0;
     top: -55%;
@@ -695,12 +697,12 @@ i{
     z-index: 30;
 }
 
-.player_menu.active{
+.player_menu.active {
     top: -10px;
     opacity: 1;
 }
 
-.player_menu_link{
+.player_menu_link {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -708,23 +710,263 @@ i{
     margin-bottom: 12px;
 }
 
-#btn_close{
+#btn_close {
     display: flex;
     justify-content: flex-end;
 }
 
-.player_menu_link_p{
+.player_menu_link_p {
     font-family: sans-serif;
     font-size: 18px;
     color: black;
     font-weight: 500;
 }
 
-#download{
+#download {
     background: transparent;
     border: none;
 }
 
+#randomMusicBtn {
+    background: transparent;
+    border: none;
+}
+
+.randomMusic {
+    position: absolute;
+    right: -400px;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    background: #ebedec;
+    border-radius: 15px;
+    width: 100%;
+    padding: 15px 30px;
+    height: 100%;
+    transition: all 0.14s ease-out;
+    z-index: 30;
+}
+
+.randomMusic.active {
+    right: 0;
+    opacity: 1;
+}
+
+.randomMusic_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2px;
+}
+
+.randmoMusic_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 140px;
+}
+
+.randomMusic_name {
+    border: 3px solid rgb(27, 23, 23);
+    border-radius: 5px;
+    padding: 4px 8px;
+    color: black;
+    background: white;
+    cursor: pointer;
+}
+
+.randmoMusic_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.randmoMusicGenerateBtn {
+    background: #33363b;
+    color: white;
+    padding: 10px 45px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.randmoMusic_play {
+    position: absolute;
+    right: 0;
+    bottom: -400px;
+    margin: 0;
+    opacity: 0;
+    background: #ebedec;
+    border-radius: 15px;
+    width: 100%;
+    padding: 15px 30px;
+    height: 400px;
+    transition: all 0.15s ease-out;
+    z-index: 32;
+}
+
+.randmoMusic_play.active {
+    bottom: 0;
+    opacity: 1;
+}
+
+.randmoMusic_play_overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 31;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.randmoMusic_play_overlay.active {
+    display: block;
+}
+
+.img_area_RM {
+    height: 203px;
+    width: 218px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    margin-left: 52px;
+    overflow: hidden;
+}
+
+.img_area_RM img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.RMinfo {
+    color: #33363b;
+}
+
+.RMprogress_area {
+    height: 6px;
+    width: 100%;
+    background: black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.RMprogress_area .RMprogress_bar {
+    height: inherit;
+    width: 0%;
+    border-radius: inherit;
+    position: relative;
+    background: #4c4e4f;
+}
+
+.RMprogress_bar::before {
+    content: '';
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background: #ebedec;
+    border-radius: inherit;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    background: inherit;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.RMprogress_area:hover .RMprogress_bar::before {
+    opacity: 1;
+}
+
+.RMprogress_area .RMtimer {
+    margin-top: 2px;
+}
+
+.RMtimer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.RMcurrent .RMduration {
+    font-size: 13px;
+    color: #eaeaea;
+}
+
+.randmoMusic_playInfo {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.randomMusic_controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#RMplay {
+    border: none;
+    background: none;
+}
+
+.RMagain {
+    text-align: center;
+    background: rgb(212, 212, 26);
+    border: none;
+    border-radius: 100px;
+    padding: 10px 50px;
+    color: white;
+    margin: 20px 0 0 75px;
+    cursor: pointer;
+}
+
+#RMclose {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.google_anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px
+}
+
+.ball {
+    width: 18px;
+    height: 18px;
+    border-radius: 11px;
+    margin: 0 10px;
+    animation: 2s bounce ease infinite;
+}
+
+.blue {
+    background-color: #4285F5;
+}
+
+.red {
+    background-color: #EA4436;
+    animation-delay: .25s;
+}
+
+.yellow {
+    background-color: #FBBD06;
+    animation-delay: .5s;
+}
+
+.green {
+    background-color: #34A952;
+    animation-delay: .75s;
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(25px);
+    }
+}
 
 /* Adaptive */
 @media screen and (max-width:670px) {
@@ -826,6 +1068,15 @@ i{
         height: 233px;
         width: 240px;
     }
+
+    .img_area_RM{
+        height: 185px;
+        width: 190px;
+    }
+
+    .RMagain{
+        margin: 20px 0 0 35px;
+    }
 }
 
 @media screen and (max-width:370px) {
@@ -836,6 +1087,16 @@ i{
     .img_area {
         height: 213px;
         width: 211px;
+    }
+
+    .img_area_RM{
+        height: 173px;
+        width: 173px;
+        margin-left: 35px;
+    }
+
+    .randmoMusic_footer{
+        margin-top: 185px
     }
 }
 
@@ -856,5 +1117,17 @@ i{
     .img_area {
         height: 198px;
         width: 185px;
+    }
+
+    .img_area_RM{
+        margin-left: 22px;
+    }
+
+    .randmoMusic_footer{
+        margin-top: 166px
+    }
+    
+    .RMagain{
+        margin: 20px 0 0 31px;
     }
 }

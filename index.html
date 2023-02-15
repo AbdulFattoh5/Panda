@@ -79,11 +79,11 @@
                 <h1 class="player_title">Panda Music</h1>
                 <div class="Panda_music-player">
                     <div class="wrapper">
-                        <div class="volume">
+                        <!-- <div class="volume">
                             <input oninput="thisVolume(this.value)" onchange="thisVolume(this.value)" id="volume_slider"
                                 type="range" min="0" max="100" value="100">
                             <p id="rangeValue">100</p>
-                        </div>
+                        </div> -->
                         <div class="player_menu">
                             <i id="btn_close" class="fal fa-times"></i>
                             <div class="menu_player">
@@ -93,11 +93,59 @@
                                         <p class="player_menu_link_p">Link</p>
                                     </li>
                                     <li class="player_menu_link">
-                                        <a id="download" href="" download><i class="fas fa-download"></i></a><p class="player_menu_link_p">Download</p> 
+                                        <a id="download" href="" download><i class="fas fa-download"></i></a>
+                                        <p class="player_menu_link_p">Download</p>
+                                    </li>
+                                    <li class="player_menu_link">
+                                        <button id="randomMusicBtn"><i class="fad fa-album-collection"></i></button>
+                                        <p class="player_menu_link_p">Random music</p>
                                     </li>
                                 </ul>
                             </div>
                             <div class="menu_player_overlay"></div>
+                        </div>
+                        <div class="randomMusic">
+                            <div class="randomMusic_header">
+                                <i id="randomMusicClose" class="fal fa-times"></i>
+                                <h3 class="randomMusic_h">Random music</h3>
+                                <img src="./img/little_logo.svg" alt="">
+                            </div>
+                            <div class="randmoMusic_content">
+                                <div class="google_anim">
+                                    <div class="blue ball"></div>
+                                    <div class="red ball"></div>  
+                                    <div class="yellow ball"></div>  
+                                    <div class="green ball"></div>  
+                                  </div>
+                            </div>
+                            <div class="randmoMusic_footer">
+                                <button class="randmoMusicGenerateBtn">Generate</button>
+                            </div>
+                            <div class="randmoMusic_play">
+                                <i id="RMclose" class="fal fa-times"></i>
+                                <img class="img_area_RM" src="./img/music-1.jpg" alt="">
+                                <div class="randmoMusic_playInfo">
+                                    <p class="RMname RMinfo">Coming-Back-For-You</p>
+                                    <p class="RMartist RMinfo">Fireboy DML</p>
+                                </div>
+                                <div class="RMprogress_area">
+                                    <div class="RMprogress_bar"></div>
+                                    <div class="RMtimer">
+                                        <span class="RMcurrent">0:00</span>
+                                        <span class="RMduration">0:00</span>
+                                    </div>
+                                    <audio id="RM_audio" src=""></audio>
+                                </div>
+                                <div class="randomMusic_controls">
+                                    <div class="RMplay_pause">
+                                        <button id="RMplay" class="material_icons">
+                                            <i class="button fas fa-play"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button class="RMagain">Try again</button>
+                            </div>
+                            <div class="randmoMusic_play_overlay"></div>
                         </div>
                         <div class="top_bar">
                             <i id="volume_i" class="fas fa-angle-down"></i>
@@ -128,7 +176,7 @@
                             </button>
                             <div class="play_pause">
                                 <button id="play" class="material_icons">
-                                    <i class="button fas fa-play"></i>
+                                    <i class="btn button fas fa-play"></i>
                                 </button>
                             </div>
                             <button id="next" class="material_icons">

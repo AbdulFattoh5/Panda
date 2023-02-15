@@ -370,7 +370,7 @@ const wrapper = document.querySelector('.wrapper'),
     playPausebtn = wrapper.querySelector('.play_pause'),
     prevBtn = wrapper.querySelector('#prev'),
     nextBtn = wrapper.querySelector('#next'),
-    plpa = document.querySelector('.button'),
+    plpa = document.querySelector('.btn'),
     progressArea = wrapper.querySelector('.progress_area'),
     progressBar = wrapper.querySelector('.progress_bar'),
     musicList = wrapper.querySelector('.music_list'),
@@ -387,18 +387,19 @@ const wrapper = document.querySelector('.wrapper'),
 let musicIndex = 1
 
 window.addEventListener('load', () => {
-    loadMusic(musicIndex)  // calling function while window loaded
+    loadMusic(musicIndex)
+    RMusic(AllMusicIndex)  // calling function while window loaded
     playingNow()
 })
 
-function loadMusic(IndexNumb) {
-    musicName.innerHTML = allMusic[IndexNumb - 1].name
-    musicArtist.innerHTML = allMusic[IndexNumb - 1].artist
-    musicImg.src = `img/${allMusic[IndexNumb - 1].img}.jpg`
-    mainAudio.src = `songs/${allMusic[IndexNumb - 1].src}.mp3`
-    lyricsDiv.innerHTML = allMusic[IndexNumb - 1].lyrics
-    linkBtn.href = `${allMusic[IndexNumb - 1].link}`
-    downloadBtn.href = `songs/${allMusic[IndexNumb - 1].src}.mp3`
+function loadMusic() {
+    musicName.innerHTML = allMusic[musicIndex - 1].name
+    musicArtist.innerHTML = allMusic[musicIndex - 1].artist
+    musicImg.src = `img/${allMusic[musicIndex - 1].img}.jpg`
+    mainAudio.src = `songs/${allMusic[musicIndex - 1].src}.mp3`
+    lyricsDiv.innerHTML = allMusic[musicIndex - 1].lyrics
+    linkBtn.href = `${allMusic[musicIndex - 1].link}`
+    downloadBtn.href = `songs/${allMusic[musicIndex - 1].src}.mp3`
 }
 
 // Music Play function
@@ -570,20 +571,20 @@ lyricsCloseBtn.addEventListener('click', function () {
     lyrics.classList.remove('active')
 })
 
-// Volume
-const volumeIcon = document.querySelector('#volume_i'),
-    volumeBox = document.querySelector('.volume'),
-    volume_show = document.querySelector('#rangeValue'),
-    track = document.createElement('audio'),
-    recent_volume = document.querySelector('#volume_slider');
-volumeIcon.addEventListener('click', function () {
-    volumeBox.classList.toggle('active')
-    volumeIcon.classList.toggle('active')
-})
-function thisVolume(volume_value) {
-    document.getElementById("rangeValue").innerHTML = volume_value;
-    mainAudio.volume = volume_value / 100;
-}
+// // Volume
+// const volumeIcon = document.querySelector('#volume_i'),
+//     volumeBox = document.querySelector('.volume'),
+//     volume_show = document.querySelector('#rangeValue'),
+//     track = document.createElement('audio'),
+//     recent_volume = document.querySelector('#volume_slider');
+// volumeIcon.addEventListener('click', function () {
+//     volumeBox.classList.toggle('active')
+//     volumeIcon.classList.toggle('active')
+// })
+// function thisVolume(volume_value) {
+//     document.getElementById("rangeValue").innerHTML = volume_value;
+//     mainAudio.volume = volume_value / 100;
+// }
 // Menu on player
 const playerMenuBtn = document.querySelector('#Menu_player'),
     playerMenu = document.querySelector('.player_menu'),
@@ -595,4 +596,120 @@ playerMenuBtn.addEventListener('click', function () {
 })
 playerMenuCloseBtn.addEventListener('click', function () {
     playerMenu.classList.remove('active')
+})
+// Random music
+const randomMusicBtn = document.querySelector('#randomMusicBtn'),
+    randomMusic = document.querySelector('.randomMusic'),
+    randomMusicClose = document.querySelector('#randomMusicClose'),
+    randmoMusicGenerateBtn = document.querySelector('.randmoMusicGenerateBtn'),
+    randomMusicName = document.querySelector('.randomMusic_name'),
+    RMusicImg = document.querySelector('.img_area_RM'),
+    RMname = document.querySelector('.RMname'),
+    RMartist = document.querySelector('.RMartist'),
+    RMaudio = document.querySelector('#RM_audio'),
+    RMplaypause = document.querySelector('.RMplay_pause'),
+    RMagain = document.querySelector('.RMagain'),
+    RMplpa = document.querySelector('.button'),
+    RMusicPlay = document.querySelector('.randmoMusic_play'),
+    RMprogress_area = document.querySelector('.RMprogress_area'),
+    RMprogress_bar = document.querySelector('.RMprogress_bar'),
+    RMclose = document.querySelector('#RMclose'),
+    RMoverlay = document.querySelector('.randmoMusic_play_overlay')
+
+randomMusicBtn.addEventListener('click', function () {
+    playerMenu.classList.remove('active')
+    randomMusic.classList.add('active')
+})
+randomMusicClose.addEventListener('click', function () {
+    randomMusic.classList.remove('active')
+})
+
+maxMusic = 6
+AllMusicIndex = Math.floor(Math.random() * maxMusic)
+
+RMagain.addEventListener('click', function () {
+    maxMusic = 6
+    AllMusicIndex = Math.floor(Math.random() * maxMusic)
+    RMusic()
+    RMpauseMusic()
+    RMoverlay.classList.remove('active')
+    RMusicPlay.classList.remove('active')
+})   
+
+function RMusic() {
+    RMname.innerHTML = allMusic[AllMusicIndex - 1].name
+    RMartist.innerHTML = allMusic[AllMusicIndex - 1].artist
+    RMusicImg.src = `img/${allMusic[AllMusicIndex - 1].img}.jpg`
+    RMaudio.src = `songs/${allMusic[AllMusicIndex - 1].src}.mp3`
+}
+
+function RMplayMusic() {
+    RMusicPlay.classList.add('paused')
+    RMplpa.classList.add('fa-pause')
+    RMplpa.classList.remove('fa-play')
+    RMaudio.play()
+}
+
+function RMpauseMusic() {
+    RMusicPlay.classList.remove('paused')
+    RMplpa.classList.remove('fa-pause')
+    RMplpa.classList.add('fa-play')
+    RMaudio.pause()
+}
+
+RMplaypause.addEventListener('click', function () {
+    const isMusicPause = RMusicPlay.classList.contains('paused')
+    isMusicPause ? RMpauseMusic() : RMplayMusic();
+})
+
+RMaudio.addEventListener('timeupdate', function (el) {
+    const currentTime = el.target.currentTime // current time of music
+    const duration = el.target.duration // total duration time of music
+    let progressWidth = (currentTime / duration) * 100
+    RMprogress_bar.style.width = `${progressWidth}%`
+
+    let musicCurrentTime = RMusicPlay.querySelector('.RMcurrent'),
+        musicDuration = RMusicPlay.querySelector('.RMduration')
+
+    RMaudio.addEventListener('loadeddata', function () {
+        // update total duration
+        let audioDuration = RMaudio.duration,
+            totalMin = Math.floor(audioDuration / 60)
+        totalSec = Math.floor(audioDuration % 60)
+        if (totalSec < 10) { // 0 if sec is less than 10
+            totalSec = `0${totalSec}`
+        }
+        musicDuration.innerHTML = `${totalMin}:${totalSec}`
+    })
+    // update current time
+    let currentMin = Math.floor(currentTime / 60),
+        currentSec = Math.floor(currentTime % 60)
+    if (currentSec < 10) { // 0 if sec is less than 10
+        currentSec = `0${currentSec}`
+    }
+    musicCurrentTime.innerHTML = `${currentMin}:${currentSec}`
+})
+
+RMprogress_area.addEventListener('click', function (el) {
+    let progressWidth = RMprogress_area.clientWidth, // width of progress bar
+        clickedOffsetX = el.offsetX, // offset X value
+        songduration = RMaudio.duration // music total duration
+    RMaudio.currentTime = (clickedOffsetX / progressWidth) * songduration
+    RMplayMusic()
+})
+
+randmoMusicGenerateBtn.addEventListener('click', function () {
+    RMoverlay.classList.add('active')
+    RMusicPlay.classList.add('active')
+    pauseMusic()
+})
+
+RMclose.addEventListener('click', function () {
+    RMoverlay.classList.remove('active')
+    RMusicPlay.classList.remove('active')
+})
+
+RMoverlay.addEventListener('click', function () {
+    RMoverlay.classList.remove('active')
+    RMusicPlay.classList.remove('active')
 })
