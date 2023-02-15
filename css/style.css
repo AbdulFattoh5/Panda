@@ -794,14 +794,14 @@ i {
 .randmoMusic_play {
     position: absolute;
     right: 0;
-    bottom: -400px;
+    bottom: -500px;
     margin: 0;
     opacity: 0;
     background: #ebedec;
     border-radius: 15px;
     width: 100%;
     padding: 15px 30px;
-    height: 400px;
+    height: 430px;
     transition: all 0.15s ease-out;
     z-index: 32;
 }
@@ -1075,7 +1075,7 @@ i {
     }
 
     .RMagain{
-        margin: 20px 0 0 35px;
+        margin: 20px 0 0 60px;
     }
 }
 
@@ -1097,6 +1097,10 @@ i {
 
     .randmoMusic_footer{
         margin-top: 185px
+    }
+
+    .RMagain{
+        margin: 20px 0 0 40px;
     }
 }
 

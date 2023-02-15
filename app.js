@@ -360,6 +360,283 @@ let allMusic = [
         Lolly-lolly-lolly, lolly-lolly-lolly <br>
         Lolly-lolly-lolly, lolly-lolly-lolly`
     },
+    {
+        name: 'Доча',
+        artist: 'Jah Khalib',
+        img: 'music-7',
+        src: 'music-7',
+        link: 'https://youtu.be/ME-29s54CE0',
+        lyrics: `Что ты видишь в своих снах? <br>
+        Там, наверное, весна <br>
+        И плывут облака? <br>
+        В твоих миленьких глазах <br>
+        И, надеюсь, в твоих снах <br>
+        Где-то рядом есть я <br>
+        И я одна из причин, по которой ты улыбаешься <br>
+        Как это прекрасно – быть отцом <br>
+        Как это прекрасно – быть отцом <br>
+        Стою на земле, но невесом <br>
+        Я думаю, готов отдать тебе всё целиком <br>
+        Когда я смотрю на твоё лицо <br>
+        Я пою: "О, Боже, да" <br>
+        Как ты на меня похожа, да <br>
+        Я счастлив, когда ты тоже, да <br>
+        Ведь это чувство до дрожи <br>
+        Что ты видишь в своих снах? <br>
+        Там, наверное, весна <br>
+        И плывут облака? <br>
+        В твоих миленьких глазах <br>
+        И, надеюсь, в твоих снах <br>
+        Где-то рядом есть я <br>
+        И я одна из причин, по которой ты улыбаешься <br>
+        Как это прекрасно – быть отцом, особенно твоим <br>
+        Я видел всю планету, но в тебе есть целый мир <br>
+        Ты ещё не умеешь, но мы часто говорим <br>
+        С тобою нахожу себя другим <br>
+        И я спускаюсь со сцены, и смываю грим <br>
+        Перед тобой без масок я верю, что любим <br>
+        Перед тобой я тот, кто я есть, золото теряет вес <br>
+        Когда мы лишь глазами говорим <br>
+        Из грубого, типичного брутала, наглеца <br>
+        Я превращаюсь в твоего миленького отца <br>
+        И словно за мгновение пролетают месяца <br>
+        В тебе я постоянно наблюдаю чудеса <br>
+        И пою: "О, Боже, да" <br>
+        Как ты на меня похожа, да <br>
+        Я счастлив, когда ты тоже, да <br>
+        Ведь чувство до дрожи <br>
+        Что ты видишь в своих снах? <br>
+        Там наверное весна <br>
+        И плывут облака? <br>
+        В твоих миленьких глазах <br>
+        И, надеюсь, в твоих снах <br>
+        Где-то рядом есть я <br>
+        И я одна из причин, по которой ты улыбаешься <br>
+        Что ты видишь в своих снах? <br>
+        Там, наверное, весна <br>
+        И плывут облака? <br>
+        В твоих миленьких глазах <br>
+        И, надеюсь, в твоих снах <br>
+        Где-то рядом есть я <br>
+        И я одна из причин, по которой ты улыбаешься`
+    },
+    {
+        name: 'Лунная Ночь',
+        artist: 'Emin feat JONY',
+        img: 'music-8',
+        src: 'music-8',
+        link: 'https://youtu.be/G0J-VovoVvE',
+        lyrics: `Я полюбил лишь тебя <br>
+        Душу твою <br>
+        Слёзы льются любя <br>
+        Под лунную ночь для тебя пою <br>
+        Счастливей нет меня <br>
+        Когда ты рядом, милая <br>
+        Я полюбил тебя <br>
+        Теперь навеки ты моя <br>
+        Никогда не знал любви такой <br>
+        Говорят мне, что я сам не свой <br>
+        Летней ночью я к тебе босой <br>
+        Коснись меня и душу успокой <br>
+        Я не понял как, но закружило нас <br>
+        Тихо тает свет – бежим от лишних глаз <br>
+        Пусть это будет навсегда <br>
+        Пусть другие кто куда <br>
+        Но ты моя, ты моя, ты моя <br>
+        Я полюбил лишь тебя <br>
+        Душу твою <br>
+        Слёзы льются любя <br>
+        Под лунную ночь для тебя пою <br>
+        Счастливей нет меня <br>
+        Когда ты рядом, милая <br>
+        Я полюбил тебя <br>
+        Теперь навеки ты моя <br>
+        Никогда не знал любви такой <br>
+        Греешь душу мне – я сам не свой <br>
+        Тёплой ночью прикоснись рукой <br>
+        Знаю, ты пришла мне подарить покой <br>
+        Я не понял как, но закружило нас <br>
+        Мы же знаем всё с тобой без лишних фраз <br>
+        Пусть это будет навсегда <br>
+        Пусть другие кто куда <br>
+        Но ты моя, ты моя, ты моя <br>
+        Я полюбил лишь тебя <br>
+        Душу твою <br>
+        Слёзы льются любя <br>
+        Под лунную ночь для тебя пою <br>
+        Счастливей нет меня <br>
+        Когда ты рядом, милая <br>
+        Я полюбил тебя <br>
+        Теперь навеки ты моя <br>
+        Ты моя <br>
+        Ты моя`
+    },
+    {
+        name: 'Con La Brisa',
+        artist: 'Foudeqush & Ludwig Göransson',
+        img: 'music-9',
+        src: 'music-9',
+        link: 'https://youtu.be/FSXcA0FPpbM',
+        lyrics: `Yo daré mi vida entera <br>
+        Por sacarte de las penumbras <br>
+        Romperé con tu condena <br>
+        En este mundo que se derrumba <br>
+        Dame un poco más de tiempo <br>
+        Que mi último aliento yo lo daré <br>
+        Para mostrarte el cielo entero <br>
+        En las nubes contigo me recostaré <br>
+        Y nos colamos con la brisa <br>
+        Y navegamos con el viento <br>
+        Tenía la intensidad de tus ojos <br>
+        Quema más que el fuego y se refleja en vidrios rotos <br>
+        Prometo que un día abrirás los ojos <br>
+        Y apreciarás los tonos más rojos que ofrеce el cielo <br>
+        Entrе las sombras, mi amor <br>
+        Tú eres el mayor destello <br>
+        Qué bello, qué bello <br>
+        Por eso es que, mi amor <br>
+        Me recuerdas tanto a ello <br>
+        Qué bello, qué bello <br>
+        Nos colgamos con la brisa <br>
+        Y navegamos con el viento <br>
+        Y nos colgamos con la brisa <br>
+        Y navegamos con el viento <br>
+        Uh-uh-uh <br>
+        Vamos tú y yo, vamos tú y yo <br>
+        Uh-uh-uh <br>
+        Vamos los dos, vamos los dos <br>
+        Uh-uh-uh <br>
+        Vamos tú y yo, vamos tú y yo <br>
+        Uh-uh-uh <br>
+        Vamos los dos, vamos los dos`
+    },
+    {
+        name: 'Belki',
+        artist: 'Mustafa Yavuz',
+        img: 'music-10',
+        src: 'music-10',
+        link: 'https://youtu.be/7-_qRtGbCTE',
+        lyrics: `Omzumda işlemediğim günahlar <br>
+        Sözlerim de riya var <br>
+        Kederim de bir aşk <br>
+        Görüyor mu? <br>
+        Belki de yanlıştı doğrularım <br>
+        Aşkını, sevgini sorguladım <br>
+        Yolların kapalıydı zorlamadım <br>
+        Öldürdüm çiçeğimi, yaşatamadım <br>
+        Duyamadım, gidişin sessizdi <br>
+        Bilemem ki ben yarın <br>
+        Sessizce döner misin? <br>
+        Sanmam ki <br>
+        Belki de yanlıştı doğrularım <br>
+        Aşkını, sevgini sorguladım <br>
+        Yolların kapalıydı zorlamadım <br>
+        Öldürdüm çiçeğimi, yaşatamadım`
+    },
+    {
+        name: 'Watermelon Sugar',
+        artist: 'Harry Styles',
+        img: 'music-11',
+        src: 'music-11',
+        link: 'https://youtu.be/nQA97xS49LQ',
+        lyrics: `Tastes like strawberries <br>
+        On a summer evenin' <br>
+        And it sounds just like a song <br>
+        I want more berries <br>
+        And that summer feelin' <br>
+        It's so wonderful and warm <br>
+        Breathe me in <br>
+        Breathe me out <br>
+        I don't know if I could ever go without <br>
+        I'm just thinking out loud <br>
+        I don't know if I could ever go without <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar high <br>
+        Watermelon sugar <br>
+        Strawberries <br>
+        On a summer evenin' <br>
+        Baby, you're the end of June <br>
+        I want your belly <br>
+        And that summer feelin' <br>
+        Getting washed away in you <br>
+        Breathe me in <br>
+        Breathe me out <br>
+        I don't know if I could ever go without <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar high <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar high <br>
+        I just wanna taste it <br>
+        I just wanna taste it <br>
+        Watermelon sugar high <br>
+        Tastes like strawberries <br>
+        On a summer evenin' <br>
+        And it sounds just like a song <br>
+        I want your belly <br>
+        And that summer feelin' <br>
+        I don't know if I could ever go without <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar (sugar) <br>
+        High <br>
+        Watermelon sugar high (sugar) <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar <br>
+        High <br>
+        Watermelon sugar high <br>
+        I just wanna taste it <br>
+        I just wanna taste it <br>
+        Watermelon sugar high <br>
+        I just wanna taste it <br>
+        I just wanna taste it <br>
+        Watermelon sugar high <br>
+        Watermelon sugar`
+    },
+    { 
+        name: 'Eyes on you x Zara Zara',
+        artist: ' SYML',
+        img: 'music-12',
+        src: 'music-12',
+        link: 'https://youtu.be/xUxL6s5WLHY',
+        lyrics: `hai zaraa-zaraa hai zaraa ab hua asar zaraa-zaraa <br>
+        zyaada nahin bas thoda sa hua asar naya zaraa <br>
+        hai zaraa-zaraa naya zaraa ab hua asar zaraa-zaraa <br>
+        bin bataae vo raat mein zindagi kee poshaakh mein <br>
+        milne aaen the muje kuch savaal kuch savaal <br>
+        aise ulje unki jaal mein sanbhale-sanbhale hum fisal gae <br>
+        baathon-baathon mein hee hue hum behaal hae behaal <br>
+        hai zaraa-zaraa hai zaraa ab hua asar zaraa-zaraa <br>
+        zyaada nahin bas thoda sa hua asar naya zaraa <br>
+        hai zaraa-zaraa naya zaraa ab hua asar zaraa-zaraa <br>
+        bahake-bahake gumraah se dhundte the apanee raah ke <br>
+        khoe-khoe hum khud se hee mil liye mil liye <br>
+        ab mera hai jo hausla ud ke chhoona hai aasamaan <br>
+        sarhadon ke paar hee ab hum milee vahaan milee <br>
+        hai zaraa-zaraa hai zaraa ab hua asar zaraa-zaraa <br>
+        zyaada nahin bas thoda sa hua asar naya zaraa <br>
+        hai zaraa-zaraa naya zaraa ab hua asar zaraa-zaraa <br>
+        hai naya zaraa-zaraa zaraa-zaraa naya zaraa`
+    },
 ]
 
 const wrapper = document.querySelector('.wrapper'),
@@ -386,9 +663,10 @@ const wrapper = document.querySelector('.wrapper'),
 
 let musicIndex = 1
 
+// calling functions while loading
 window.addEventListener('load', () => {
     loadMusic(musicIndex)
-    RMusic(AllMusicIndex)  // calling function while window loaded
+    RMusic(AllMusicIndex)  
     playingNow()
 })
 
@@ -625,16 +903,14 @@ randomMusicClose.addEventListener('click', function () {
     RMpauseMusic()
 })
 
-maxMusic = 6
+maxMusic = 12
 AllMusicIndex = Math.floor(Math.random() * maxMusic)
 
 RMagain.addEventListener('click', function () {
-    maxMusic = 6
+    maxMusic = 12
     AllMusicIndex = Math.floor(Math.random() * maxMusic)
     RMusic()
     RMpauseMusic()
-    RMoverlay.classList.remove('active')
-    RMusicPlay.classList.remove('active')
 })   
 
 function RMusic() {
