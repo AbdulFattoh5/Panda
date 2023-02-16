@@ -848,7 +848,7 @@ i {
 .RMprogress_area {
     height: 6px;
     width: 100%;
-    background: black;
+    background: #33363b;
     border-radius: 50px;
     cursor: pointer;
 }
