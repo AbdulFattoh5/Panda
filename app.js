@@ -103,7 +103,7 @@ let musicIndex = 1
 // calling functions while loading
 window.addEventListener('load', () => {
     loadMusic(musicIndex)
-    RMusic(AllMusicIndex)  
+    rmusic(AllMusicIndex)  
     playingNow()
 })
 
@@ -115,6 +115,13 @@ function loadMusic() {
     lyricsDiv.innerHTML = allMusic[musicIndex - 1].lyrics
     linkBtn.href = `${allMusic[musicIndex - 1].link}`
     downloadBtn.href = `songs/${allMusic[musicIndex - 1].src}.mp3`
+}
+
+function rmusic() {
+    rmname.innerHTML = allMusic[AllMusicIndex - 1].name
+    rmartist.innerHTML = allMusic[AllMusicIndex - 1].artist
+    rmusicImg.src = `img/${allMusic[AllMusicIndex - 1].img}.jpg`
+    rmaudio.src = `songs/${allMusic[AllMusicIndex - 1].src}.mp3`
 }
 
 // Music Play function
@@ -318,18 +325,18 @@ const randomMusicBtn = document.querySelector('#randomMusicBtn'),
     randomMusicClose = document.querySelector('#randomMusicClose'),
     randmoMusicGenerateBtn = document.querySelector('.randmoMusicGenerateBtn'),
     randomMusicName = document.querySelector('.randomMusic_name'),
-    RMusicImg = document.querySelector('.img_area_RM'),
-    RMname = document.querySelector('.RMname'),
-    RMartist = document.querySelector('.RMartist'),
-    RMaudio = document.querySelector('#RM_audio'),
-    RMplaypause = document.querySelector('.RMplay_pause'),
-    RMagain = document.querySelector('.RMagain'),
-    RMplpa = document.querySelector('.button'),
-    RMusicPlay = document.querySelector('.randmoMusic_play'),
-    RMprogress_area = document.querySelector('.RMprogress_area'),
-    RMprogress_bar = document.querySelector('.RMprogress_bar'),
-    RMclose = document.querySelector('#RMclose'),
-    RMoverlay = document.querySelector('.randmoMusic_play_overlay')
+    rmusicImg = document.querySelector('.img_area_RM'),
+    rmname = document.querySelector('.RMname'),
+    rmartist = document.querySelector('.RMartist'),
+    rmaudio = document.querySelector('#RM_audio'),
+    rmplaypause = document.querySelector('.RMplay_pause'),
+    rmagain = document.querySelector('.RMagain'),
+    rmplpa = document.querySelector('.button'),
+    rmusicPlay = document.querySelector('.randmoMusic_play'),
+    rmprogress_area = document.querySelector('.RMprogress_area'),
+    rmprogress_bar = document.querySelector('.RMprogress_bar'),
+    rmclose = document.querySelector('#RMclose'),
+    rmoverlay = document.querySelector('.randmoMusic_play_overlay')
 
 randomMusicBtn.addEventListener('click', function () {
     playerMenu.classList.remove('active')
@@ -337,57 +344,50 @@ randomMusicBtn.addEventListener('click', function () {
 })
 randomMusicClose.addEventListener('click', function () {
     randomMusic.classList.remove('active')
-    RMpauseMusic()
+    rmpauseMusic()
 })
 
 maxMusic = 16
 AllMusicIndex = Math.floor(Math.random() * maxMusic)
 
-RMagain.addEventListener('click', function () {
+rmagain.addEventListener('click', function () {
     maxMusic = 16
     AllMusicIndex = Math.floor(Math.random() * maxMusic)
-    RMusic()
-    RMpauseMusic()
+    rmusic()
+    rmpauseMusic()
 })   
 
-function RMusic() {
-    RMname.innerHTML = allMusic[AllMusicIndex - 1].name
-    RMartist.innerHTML = allMusic[AllMusicIndex - 1].artist
-    RMusicImg.src = `img/${allMusic[AllMusicIndex - 1].img}.jpg`
-    RMaudio.src = `songs/${allMusic[AllMusicIndex - 1].src}.mp3`
+function rmplayMusic() {
+    rmusicPlay.classList.add('paused')
+    rmplpa.classList.add('fa-pause')
+    rmplpa.classList.remove('fa-play')
+    rmaudio.play()
 }
 
-function RMplayMusic() {
-    RMusicPlay.classList.add('paused')
-    RMplpa.classList.add('fa-pause')
-    RMplpa.classList.remove('fa-play')
-    RMaudio.play()
+function rmpauseMusic() {
+    rmusicPlay.classList.remove('paused')
+    rmplpa.classList.remove('fa-pause')
+    rmplpa.classList.add('fa-play')
+    rmaudio.pause()
 }
 
-function RMpauseMusic() {
-    RMusicPlay.classList.remove('paused')
-    RMplpa.classList.remove('fa-pause')
-    RMplpa.classList.add('fa-play')
-    RMaudio.pause()
-}
-
-RMplaypause.addEventListener('click', function () {
-    const isMusicPause = RMusicPlay.classList.contains('paused')
-    isMusicPause ? RMpauseMusic() : RMplayMusic();
+rmplaypause.addEventListener('click', function () {
+    const isMusicPause = rmusicPlay.classList.contains('paused')
+    isMusicPause ? rmpauseMusic() : rmplayMusic();
 })
 
-RMaudio.addEventListener('timeupdate', function (el) {
+rmaudio.addEventListener('timeupdate', function (el) {
     const currentTime = el.target.currentTime // current time of music
     const duration = el.target.duration // total duration time of music
     let progressWidth = (currentTime / duration) * 100
-    RMprogress_bar.style.width = `${progressWidth}%`
+    rmprogress_bar.style.width = `${progressWidth}%`
 
-    let musicCurrentTime = RMusicPlay.querySelector('.RMcurrent'),
-        musicDuration = RMusicPlay.querySelector('.RMduration')
+    let musicCurrentTime = rmusicPlay.querySelector('.RMcurrent'),
+        musicDuration = rmusicPlay.querySelector('.RMduration')
 
-    RMaudio.addEventListener('loadeddata', function () {
+    rmaudio.addEventListener('loadeddata', function () {
         // update total duration
-        let audioDuration = RMaudio.duration,
+        let audioDuration = rmaudio.duration,
             totalMin = Math.floor(audioDuration / 60)
         totalSec = Math.floor(audioDuration % 60)
         if (totalSec < 10) { // 0 if sec is less than 10
@@ -404,26 +404,26 @@ RMaudio.addEventListener('timeupdate', function (el) {
     musicCurrentTime.innerHTML = `${currentMin}:${currentSec}`
 })
 
-RMprogress_area.addEventListener('click', function (el) {
-    let progressWidth = RMprogress_area.clientWidth, // width of progress bar
+rmprogress_area.addEventListener('click', function (el) {
+    let progressWidth = rmprogress_area.clientWidth, // width of progress bar
         clickedOffsetX = el.offsetX, // offset X value
-        songduration = RMaudio.duration // music total duration
-    RMaudio.currentTime = (clickedOffsetX / progressWidth) * songduration
-    RMplayMusic()
+        songduration = rmaudio.duration // music total duration
+    rmaudio.currentTime = (clickedOffsetX / progressWidth) * songduration
+    rmplayMusic()
 })
 
 randmoMusicGenerateBtn.addEventListener('click', function () {
-    RMoverlay.classList.add('active')
-    RMusicPlay.classList.add('active')
+    rmoverlay.classList.add('active')
+    rmusicPlay.classList.add('active')
     pauseMusic()
 })
 
-RMclose.addEventListener('click', function () {
-    RMoverlay.classList.remove('active')
-    RMusicPlay.classList.remove('active')
+rmclose.addEventListener('click', function () {
+    rmoverlay.classList.remove('active')
+    rmusicPlay.classList.remove('active')
 })
 
-RMoverlay.addEventListener('click', function () {
-    RMoverlay.classList.remove('active')
-    RMusicPlay.classList.remove('active')
+rmoverlay.addEventListener('click', function () {
+    rmoverlay.classList.remove('active')
+    rmusicPlay.classList.remove('active')
 })
